@@ -1,7 +1,9 @@
 import express from "express"
 const router  = express.Router();
 import passport from "passport";
-
+import bcrypt from "bcrypt";
+import db from "../database.js"
+var saltRounds = 12;
 router.get("/",(req,res)=>{
     res.render("register.ejs")
 })
